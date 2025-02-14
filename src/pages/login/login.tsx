@@ -9,7 +9,7 @@ export const Login: FC = () => {
   const navigate = useNavigate();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const { user, error } = useSelector(userSelector);
+  const { error } = useSelector(userSelector);
   const location = useLocation();
 
   const handleSubmit = (e: SyntheticEvent) => {

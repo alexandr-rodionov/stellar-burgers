@@ -30,12 +30,16 @@ export const BurgerConstructor: FC = () => {
       constructorItems.bun._id
     ];
 
-    dispatch(postOrder(orderIngredients));
+    dispatch(postOrder(orderIngredients))
+      .unwrap()
+      .then(() => dispatch(clearIngredients()))
+      .catch((err) =>
+        console.error(`Failed to complete the request: ${err.message}`)
+      );
   };
 
   const closeOrderModal = () => {
     dispatch(clearOrder());
-    dispatch(clearIngredients());
     navigate('/', { replace: true });
   };
 

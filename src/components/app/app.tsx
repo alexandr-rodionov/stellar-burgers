@@ -21,20 +21,14 @@ import {
 import '../../index.css';
 import styles from './app.module.css';
 import { useEffect } from 'react';
-import { useDispatch, useSelector } from '../../services/store';
-import {
-  authCheck,
-  getIngredientsThunk,
-  getUserThunk,
-  userSelector
-} from '@slices';
+import { useDispatch } from '../../services/store';
+import { authCheck, getIngredientsThunk, getUserThunk } from '@slices';
 
 const App = () => {
   const location = useLocation();
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const bgLocation = location.state?.background;
-  const { isAuthChecked } = useSelector(userSelector);
 
   useEffect(() => {
     const token = localStorage.getItem('refreshToken');

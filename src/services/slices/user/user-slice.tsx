@@ -96,7 +96,10 @@ const userSlice = createSlice({
     builder
       .addCase(updateUserThunk.pending, commonPendingHandler)
       .addCase(updateUserThunk.rejected, commonRejectedHandler)
-      .addCase(updateUserThunk.fulfilled, commonFulfilledHandler);
+      .addCase(updateUserThunk.fulfilled, (state, { payload }) => {
+        state.user = payload.user;
+        commonFulfilledHandler(state);
+      });
     builder
       .addCase(logoutUserThunk.pending, commonPendingHandler)
       .addCase(logoutUserThunk.rejected, commonRejectedHandler)
