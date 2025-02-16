@@ -1,19 +1,52 @@
-# Проектная работа 11-го спринта
+# Роутинг и авторизация (11 спринт)
 
-[Макет](<https://www.figma.com/file/vIywAvqfkOIRWGOkfOnReY/React-Fullstack_-Проектные-задачи-(3-месяца)_external_link?type=design&node-id=0-1&mode=design>)
+## Проектная работа: "Stellar Burger"
 
-[Чеклист](https://www.notion.so/praktikum/0527c10b723d4873aa75686bad54b32e?pvs=4)
+### Структура:
 
-## Этапы работы:
+- src/ — корневой каталог
+- src/components/ — каталог компонентов
+- src/images/ — каталог изображений
+- src/pages/ — каталог основных страниц
+- src/services/ — каталог служебных файлов
+- src/stories/ — каталог Storybook
+- src/utils/ — каталог с утилитами
 
-1. Разверните проект и ознакомьтесь с кодом. Все необходимые вам компоненты уже созданы и лежат в папке `src/components`
+### Важные файлы:
 
-2. Настройте роутинг.
+- src/index.tsx — точка входа приложения
+- src/services/store.ts — хранилище приложения
+- src/services/slices/*.tsx — слайсы хранилища
 
-3. Напишите функционал запросов данных с сервера, используя `Redux` и глобальный `store`. Сами "ручки" уже прописаны и лежат в `utils/burger-api.ts`
+### Установка и запуск
 
-4. Настройте авторизацию и создайте защищённые роуты.
+Для установки и запуска проекта необходимо выполнить команды:
 
-## Важно:
+```
+npm install
+npm run start
+```
 
-Для корректной работы запросов к серверу необходимо добавить переменную BURGER_API_URL в окружение. Сама ссылка находится в файле `.env.example`.
+Для запуска Storybook выполните:
+
+```
+npm run storybook
+```
+
+Для запуска линтера выполните:
+
+```
+npm run lint
+```
+
+Для запуска форматтера выполните:
+
+```
+npm run format
+```
+
+---
+
+**Ссылка на макет: _[Stellar Burger](<https://www.figma.com/file/vIywAvqfkOIRWGOkfOnReY/React-Fullstack_-Проектные-задачи-(3-месяца)_external_link?type=design&node-id=0-1&mode=design>)_**
+
+**Ссылка на проект: _[Stellar Burger](https://github.com/alexandr-rodionov/stellar-burgers.git)_**
