@@ -34,8 +34,8 @@ const ingredientsSlice = createSlice({
         state.error = error.message;
       })
       .addCase(getIngredientsThunk.fulfilled, (state, { payload }) => {
-        state.loading = false;
         state.ingredients = payload;
+        state.loading = false;
       });
   },
   selectors: {

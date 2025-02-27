@@ -34,8 +34,8 @@ const orderHistorySlice = createSlice({
         state.error = error.message;
       })
       .addCase(getOrderHistoryThunk.fulfilled, (state, { payload }) => {
-        state.loading = false;
         state.orderHistory = payload;
+        state.loading = false;
       });
   },
   selectors: {
