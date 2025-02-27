@@ -5,7 +5,7 @@ const sauce = 'Соус Spicy-X';
 describe('Добавить ингредиенты из списка в конструктор', () => {
   beforeEach(() => {
     cy.intercept('GET', 'api/ingredients', { fixture: 'ingredients.json' });
-    cy.visit('http://localhost:8080');
+    cy.visit('/');
   });
 
   it('Добавить булку', () => {
@@ -21,7 +21,7 @@ describe('Добавить ингредиенты из списка в конс�
 describe('Модальное окно', () => {
   beforeEach(() => {
     cy.intercept('GET', 'api/ingredients', { fixture: 'ingredients.json' });
-    cy.visit('http://localhost:8080');
+    cy.visit('/');
   });
 
   it('Открыть модальное окно', () => {
@@ -46,7 +46,7 @@ describe('Заказ', () => {
     cy.intercept('POST', 'api/orders', { fixture: 'order.json' });
     window.localStorage.setItem('refreshToken', JSON.stringify('test-RT'));
     cy.setCookie('accessToken', 'test-AT');
-    cy.visit('http://localhost:8080');
+    cy.visit('/');
   });
 
   afterEach(() => {
