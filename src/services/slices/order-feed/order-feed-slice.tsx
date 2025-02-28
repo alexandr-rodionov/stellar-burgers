@@ -42,7 +42,6 @@ const orderFeedSlice = createSlice({
         state.total = payload.total;
         state.totalToday = payload.totalToday;
         state.loading = false;
-        state.error = null;
       });
   },
   selectors: {
